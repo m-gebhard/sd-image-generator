@@ -1,0 +1,103 @@
+// colors
+$color-text: #333;
+$color-background: #131313;
+
+// breakpoints
+$breakpoints: (
+    xs: (
+        dir: min,
+        size: 0px,
+    ),
+    s: (
+        dir: min,
+        size: 421px,
+    ),
+    m: (
+        dir: min,
+        size: 701px,
+    ),
+    l: (
+        dir: min,
+        size: 1181px,
+    ),
+    xl: (
+        dir: min,
+        size: 1481px,
+    ),
+    xxl: (
+        dir: min,
+        size: 2440px,
+    ),
+);
+
+// spacings
+$spacings: (
+    xs: 10px 11px 12px 13px 14px 14px,
+    s: 14px 14px 16px 18px 20px 20px,
+    m: 20px 20px 22px 24px 28px 28px,
+    l: 30px 30px 35px 35px 40px 40px,
+    xl: 20px 40px 50px 50px 55px 55px,
+    xxl: 20px 40px 75px 140px 260px 260px,
+);
+// fonts
+$font-family: Avenir, Helvetica, Arial, sans-serif;
+
+$fonts: (
+    h1: (
+        size: 26px 26px 34px 44px 50px 50px,
+        height: 40px 46px 50px 60px 70px 70px,
+        family: $font-family,
+        letterspacing: 0em,
+    ),
+    h2: (
+        size: 22px 24px 28px 29px 32px 32px,
+        height: 30px 33px 39px 41px 45px 45px,
+        family: $font-family,
+        letterspacing: 0em,
+    ),
+    h3: (
+        size: 17px 19px 20px 22px 24px 24px,
+        height: 30px 32px 35px 38px 40px 40px,
+        family: $font-family,
+        letterspacing: 0em,
+    ),
+    p1: (
+        size: 15px 16px 16px 17px 18px 18px,
+        height: 24px 25px 26px 27px 30px 30px,
+        family: $font-family,
+        letterspacing: 0em,
+    ),
+    p2: (
+        size: 13px 13px 14px 14px 15px 15px,
+        height: 25px 25px 25px 27px 28px 28px,
+        family: $font-family,
+        letterspacing: 0.03em,
+    ),
+    p3: (
+        size: 11px 11px 12px 12px 13px 13px,
+        height: 15px 16px 18px 19px 20px 20px,
+        family: $font-family,
+        letterspacing: 0em,
+    ),
+    a1: (
+        size: 17px 17px 19px 19px 20px 20px,
+        height: 24px 24px 29px 33px 33px 33px,
+        family: $font-family,
+        letterspacing: 0em,
+    ),
+);
+
+// font weights
+$font-weight-bold: 800;
+$font-weight-normal: 300;
+
+// durations
+$duration-fast: 250ms;
+$duration-medium: 400ms;
+$duration-slow: 1000ms;
+
+// border
+$border-radius-default: 8px;
+
+// shadow
+$box-shadow-default: 0 4px 4px var(--color-box-shadow);

@@ -1,0 +1,13 @@
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+numpy >= 1.26.3
+torch >= 2.5.1
+torchvision >= 0.20.1
+torchaudio >= 2.5.1
+safetensors >= 0.4.5
+accelerate >= 1.2.0
+diffusers >= 0.31.0
+python-dotenv >= 1.0.1
+pillow >= 11.0.0
+websockets >= 14.1
+transformers >= 4.47.0

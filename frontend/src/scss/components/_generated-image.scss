@@ -1,0 +1,11 @@
+.generated-image {
+    cursor: pointer;
+    transition: transform $duration-medium;
+
+    @include bp(l) {
+        &:hover,
+        &:focus {
+            transform: translateY(-5px);
+        }
+    }
+}

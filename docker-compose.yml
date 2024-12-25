@@ -1,0 +1,28 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8765:8765"
+    volumes:
+      - ./backend:/app
+    # Remove the 'deploy' block to disable GPU-support
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_APP_WEBSOCKET_URL: "ws://host.docker.internal:8765"
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    environment:
+      - VITE_APP_WEBSOCKET_URL="ws://host.docker.internal:8765"

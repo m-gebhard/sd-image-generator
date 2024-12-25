@@ -1,0 +1,23 @@
+.notification-container {
+    @include spacing(padding, m, left right);
+    @include spacing(padding, xs, top);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100000;
+    pointer-events: none;
+
+    .v-alert {
+        @include spacing(margin, xs, bottom);
+
+        cursor: pointer;
+        background-color: $color-background;
+        pointer-events: all;
+    }
+}
+
+.notification-container__list {
+    display: flex;
+    flex-flow: column nowrap;
+}

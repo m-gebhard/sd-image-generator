@@ -1,0 +1,47 @@
+.image-toolbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
+
+.image-toolbar .svg-inline--fa {
+    font-size: 1.5em;
+}
+
+.image-toolbar .v-col {
+    display: flex;
+    flex-flow: row nowrap;
+
+    > .v-btn:not(:last-of-type) {
+        @include spacing(margin, xs, right);
+    }
+
+    > .v-btn:first-of-type {
+        margin-left: auto;
+    }
+}
+
+.lightbox-toolbar {
+    @include spacing(padding, m, top bottom);
+
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+    margin-right: 0;
+
+    .v-col-12 {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+.vel-modal {
+    height: 100vh;
+}

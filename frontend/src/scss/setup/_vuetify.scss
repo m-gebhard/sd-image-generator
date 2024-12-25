@@ -1,0 +1,36 @@
+.v-navigation-drawer,
+.v-bottom-navigation,
+.v-container,
+.v-expansion-panel {
+    @include bp(l) {
+        background: none !important;
+        backdrop-filter: blur(10px);
+    }
+}
+
+.v-application {
+    @include bp(l) {
+        background-image: none !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent !important;
+    }
+}
+
+.v-app {
+    width: 100%;
+}
+
+.v-responsive {
+    position: relative;
+    z-index: 1;
+}
+
+.v-input {
+    @include spacing(margin, xs, bottom);
+}
+
+.v-field__outline {
+    display: none !important;
+}

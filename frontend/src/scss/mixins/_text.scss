@@ -1,0 +1,22 @@
+@mixin text($type) {
+    @if map_has_key($fonts, $type) {
+        $text: map_get($fonts, $type);
+        $size: map_get($text, size);
+        $family: map_get($text, family);
+        $lineHeight: map_get($text, height);
+        $letterSpacing: map_get($text, letterspacing);
+        $bps: map_keys($breakpoints);
+
+        @each $bp in $bps {
+            $i: index($bps, $bp);
+            @include bp($bp) {
+                font-size: nth($size, $i);
+                line-height: nth($lineHeight, $i);
+            }
+        }
+        font-family: #{$family};
+        letter-spacing: $letterSpacing;
+    } @else {
+        @warn "Unfortunately, no value could be retrieved for `#{$type}`.";
+    }
+}
