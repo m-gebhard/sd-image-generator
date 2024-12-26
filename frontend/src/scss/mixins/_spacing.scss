@@ -1,0 +1,39 @@
+@mixin spacing($attribute, $size, $sides: null, $type: positive) {
+    $spacing: map_get($spacings, $size);
+    $bps: map_keys($breakpoints);
+
+    @each $bp in $bps {
+        $i: index($bps, $bp);
+        $spacer: nth($spacing, $i);
+
+        @include bp($bp) {
+            @if $attribute == padding or $attribute == margin {
+                @if $sides == null {
+                    @if $type == negative {
+                        #{$attribute}: -#{$spacer};
+                    } @else {
+                        #{$attribute}: $spacer;
+                    }
+                } @else {
+                    @each $side in $sides {
+                        @if $type == negative {
+                            #{$attribute}-#{$side}: -#{$spacer};
+                        } @else {
+                            #{$attribute}-#{$side}: $spacer;
+                        }
+                    }
+                }
+            }
+
+            @if $attribute == position {
+                @each $side in $sides {
+                    @if $type == negative {
+                        #{$side}: -#{$spacer};
+                    } @else {
+                        #{$side}: $spacer;
+                    }
+                }
+            }
+        }
+    }
+}

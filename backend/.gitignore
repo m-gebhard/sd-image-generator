@@ -1,0 +1,6 @@
+generated_images
+models
+*.safetensors
+.idea
+.env
+__pycache__

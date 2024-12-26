@@ -1,0 +1,27 @@
+$container-max-widths: (
+    xs: 540px,
+    s: 720px,
+    m: 800px,
+    l: 1180px,
+    xl: 1540px,
+    xxl: 1840px,
+);
+$gutter-width: 30px !default;
+
+@mixin make-container($max-widths: $container-max-widths) {
+    width: 100%;
+    padding-right: $gutter-width;
+    padding-left: $gutter-width;
+    margin-right: auto;
+    margin-left: auto;
+
+    @each $breakpoint, $container-max-width in $max-widths {
+        @include bp($breakpoint) {
+            max-width: $container-max-width;
+        }
+    }
+}
+
+.container {
+    @include make-container();
+}

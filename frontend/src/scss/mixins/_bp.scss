@@ -1,0 +1,12 @@
+@mixin bp($bp) {
+    @if map_has_key($breakpoints, $bp) {
+        $size: map_get(map_get($breakpoints, $bp), size);
+        @if $size == 0 {
+            @content;
+        } @else {
+            @media only screen and (min-width: $size) {
+                @content;
+            }
+        }
+    }
+}
